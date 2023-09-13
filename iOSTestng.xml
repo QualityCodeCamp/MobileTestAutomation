@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="iOS Basic Test Suite">
+
+    <test name="AppiumUdemyProject">
+        <parameter name="deviceName" value="iPhone 13"></parameter>
+        <parameter name="port" value="4723"></parameter>
+        <parameter name="appName" value="/Users/bharatmalik/Documents/GitHub/TestProject/UIKitCatalog.app"></parameter>
+        <classes>
+            <class name="iOS.Tests.iosRealdevice"></class>
+        </classes>
+    </test>
+</suite>
