@@ -13,6 +13,7 @@ public class AndroidBase {
 
     private String bundleid="";
     private String appName="";
+
     public ThreadLocal<AndroidDriver> driver= new ThreadLocal<>();
     public AndroidDriver getDriver() {
         return this.driver.get();
@@ -40,19 +41,18 @@ public class AndroidBase {
     @BeforeClass
     @Parameters({"deviceName","port"})
     public  void ConfigureDriver(String deviceName,String port) throws MalformedURLException {
-
+    System.out.println("Device name recieved is and drive is " + deviceName+ " "+driver.toString());
         UiAutomator2Options dc=new UiAutomator2Options();
-//C:\\Users\\16473\\IdeaProjects\\TestProject\\ApiDemos-debug.apk"
-        dc.setDeviceName(deviceName);
+
+        //dc.setDeviceName(deviceName);
+        dc.setUdid(deviceName);
         dc.setApp(appName);
         String url=String.format("http://0.0.0.0:%s",port);
-       // dc.setPlatformVersion("");
+        //dc.setPlatformVersion("Android 13.0");
         setDriver(new AndroidDriver(new URL(url),dc));
 
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
     }
-
     @AfterClass
     public void teardown(){
         getDriver().quit();
