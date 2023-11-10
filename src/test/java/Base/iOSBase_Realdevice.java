@@ -45,9 +45,9 @@ public class iOSBase_Realdevice {
         XCUITestOptions dc=new XCUITestOptions();
         dc.setDeviceName(deviceName);
         dc.setPlatformVersion("13.7");
-        dc.setCapability("xcodeOrgId","JPVV93TB2Z");
+        dc.setCapability("xcodeOrgId","");
         dc.setCapability("xcodeSigningId","iPhone Developer");
-        dc.setCapability("udid","00008110-001404C22622401E");
+        dc.setCapability("udid","");
         dc.setApp(appName);
         dc.setWdaLaunchTimeout(Duration.ofSeconds(20));
         String url=String.format("http://0.0.0.0:%s",port);
