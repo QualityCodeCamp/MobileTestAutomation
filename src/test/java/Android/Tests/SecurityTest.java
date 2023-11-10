@@ -40,70 +40,70 @@ public class SecurityTest extends AndroidBase {
 
 
 
-//    @Test
-//    public void DeviceLevelsettings(){
-//       driver.openNotifications();
-//        System.out.println(driver.getDeviceTime());
-//        System.out.println(driver.getDeviceTime("mm/dd/yyyy"));
-//
-//    }
-//@Test
-//    public void setpin() throws InterruptedException {
-//    driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Security\"));")).click();
-//    driver.findElement(By.xpath(" //android.widget.TextView[@text='Pixel Imprint']")).click();
-//    driver.findElement(By.xpath(" //android.widget.TextView[@text='PIN']")).click();
-//    //Thread.sleep(4000);
-//    //System.out.println(driver.getPageSource());
-//
-//    driver.findElement(By.className("android.widget.EditText")).sendKeys("0000");
-//    driver.findElement(By.xpath(" //android.widget.Button[@text='NEXT']")).click();
-//
-//    driver.findElement(By.className("android.widget.EditText")).sendKeys("0000");
-//    driver.findElement(By.xpath(" //android.widget.Button[@text='CONFIRM']")).click();
-//    driver.findElement(By.xpath("//android.widget.Button[@text='DONE']")).click();
-//
-//    //android.widget.TextView[@text='Pixel Imprint'] -
-//        //android.widget.TextView[@text='PIN']
-//    }
+    @Test
+    public void DeviceLevelsettings(){
+       driver.openNotifications();
+        System.out.println(driver.getDeviceTime());
+        System.out.println(driver.getDeviceTime("mm/dd/yyyy"));
 
-//    @Test
-//    public void SETUPFINGERPRINT() throws InterruptedException {
-//        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Security\"));")).click();
-//        driver.findElement(By.xpath("//android.widget.TextView[@text='Pixel Imprint']")).click();
-//        driver.findElement(By.className("android.widget.EditText")).sendKeys("0000");
-//       // driver.executeScript("mobile:performEditorAction",ImmutableMap.of("action","done"));
-//        driver.pressKey(new KeyEvent(AndroidKey.ENTER));
-//
-//        //driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"I AGREE\"));")).click();
-//        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textMatches(\"I AGREE\").instance(0))"));
-//        driver.findElement(By.xpath("//android.widget.Button[@text='I AGREE']")).click();
-//
-//        boolean isaddedFingerprint=false;
-//
-//        while(!isaddedFingerprint)
-//        try{
-//            WebElement element= driver.findElement(By.xpath("//android.widget.Button[@text='DONE']"));
-//        element.click();
-//        isaddedFingerprint=true;
-//        }
-//        catch (Exception e){
-//            driver.fingerPrint(1);
-//            Thread.sleep(2000);
-//        }
-//
-//    }
+    }
+@Test
+    public void setpin() throws InterruptedException {
+    driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Security\"));")).click();
+    driver.findElement(By.xpath(" //android.widget.TextView[@text='Pixel Imprint']")).click();
+    driver.findElement(By.xpath(" //android.widget.TextView[@text='PIN']")).click();
+    //Thread.sleep(4000);
+    //System.out.println(driver.getPageSource());
+
+    driver.findElement(By.className("android.widget.EditText")).sendKeys("0000");
+    driver.findElement(By.xpath(" //android.widget.Button[@text='NEXT']")).click();
+
+    driver.findElement(By.className("android.widget.EditText")).sendKeys("0000");
+    driver.findElement(By.xpath(" //android.widget.Button[@text='CONFIRM']")).click();
+    driver.findElement(By.xpath("//android.widget.Button[@text='DONE']")).click();
+
+    //android.widget.TextView[@text='Pixel Imprint'] -
+        //android.widget.TextView[@text='PIN']
+    }
+
+    @Test
+    public void SETUPFINGERPRINT() throws InterruptedException {
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Security\"));")).click();
+        driver.findElement(By.xpath("//android.widget.TextView[@text='Pixel Imprint']")).click();
+        driver.findElement(By.className("android.widget.EditText")).sendKeys("0000");
+       // driver.executeScript("mobile:performEditorAction",ImmutableMap.of("action","done"));
+        driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+
+        //driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"I AGREE\"));")).click();
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textMatches(\"I AGREE\").instance(0))"));
+        driver.findElement(By.xpath("//android.widget.Button[@text='I AGREE']")).click();
+
+        boolean isaddedFingerprint=false;
+
+        while(!isaddedFingerprint)
+        try{
+            WebElement element= driver.findElement(By.xpath("//android.widget.Button[@text='DONE']"));
+        element.click();
+        isaddedFingerprint=true;
+        }
+        catch (Exception e){
+            driver.fingerPrint(1);
+            Thread.sleep(2000);
+        }
+
+    }
 
 
-//    @Test
-//    public void appactivity() throws InterruptedException {
-//        System.out.println(driver.currentActivity());
-//
-//        System.out.println(driver.getCurrentPackage());
-//        driver.terminateApp("io.appium.android.apis");
-//        driver.startActivity(new Activity("io.appium.android.apis",".ApiDemos"));
-//
-//
-//    }
+    @Test
+    public void appactivity() throws InterruptedException {
+        System.out.println(driver.currentActivity());
+
+        System.out.println(driver.getCurrentPackage());
+        driver.terminateApp("io.appium.android.apis");
+        driver.startActivity(new Activity("io.appium.android.apis",".ApiDemos"));
+
+
+    }
 
     @Test
     public void networkactivity() throws InterruptedException {

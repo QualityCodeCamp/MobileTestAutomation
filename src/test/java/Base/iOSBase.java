@@ -13,7 +13,7 @@ import java.time.Duration;
 public class iOSBase {
 
     private String bundleid="";
-    //private String appName="";
+   // private String appName="";
     public ThreadLocal<IOSDriver> driver= new ThreadLocal<>();
     public IOSDriver getDriver() {
         return this.driver.get();

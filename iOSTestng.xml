@@ -4,11 +4,11 @@
 <suite name="iOS Basic Test Suite">
 
     <test name="AppiumUdemyProject">
-        <parameter name="deviceName" value="iPhone 13"></parameter>
+        <parameter name="deviceName" value="iPhone 14"></parameter>
         <parameter name="port" value="4723"></parameter>
-        <parameter name="appName" value="/Users/bharatmalik/Documents/GitHub/TestProject/UIKitCatalog.app"></parameter>
+        <parameter name="appName" value="/Users/bharatmalik/Documents/GitHub/TestProject/UICatalog.app"></parameter>
         <classes>
-            <class name="iOS.Tests.iosRealdevice"></class>
+            <class name="iOS.Tests.iOSTest"></class>
         </classes>
     </test>
 </suite>
