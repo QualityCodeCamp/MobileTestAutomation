@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Android Basic Test Suite">
-    
+
     <test name="AppiumUdemyProject">
-        <parameter name="deviceName" value="Pixel XL API 33"></parameter>
+        <parameter name="deviceName" value="Pixel XL API 33:5556"></parameter>
         <parameter name="port" value="4723"></parameter>
         <classes>
-            <class name="Android.Tests.SecurityTest"></class>
+            <class name="Android.Tests.BasicAndroidTest1"></class>
         </classes>
     </test>
 </suite>

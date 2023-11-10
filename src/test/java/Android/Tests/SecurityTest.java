@@ -35,7 +35,7 @@ public class SecurityTest extends AndroidBase {
     @BeforeMethod
     public void beforemethod(){
         System.out.println("in beforemthod , runs before every test");
-      // getDriver().activateApp(bundleId);
+       getDriver().activateApp(bundleId);
     }
 
 
